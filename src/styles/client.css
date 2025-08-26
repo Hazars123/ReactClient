@@ -1,0 +1,47 @@
+.dashboard-container {
+  padding: 20px;
+  background: #f5f7fa;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-name {
+  font-weight: 500;
+}
+
+.MuiTable-root {
+  min-width: 650px;
+}
+
+.MuiTableCell-root {
+  padding: 12px 16px;
+}
+
+.MuiChip-root {
+  font-weight: 500;
+}
+
+.MuiSelect-select {
+  padding: 8px 32px 8px 12px !important;
+}
+
+.MuiIconButton-root {
+  padding: 8px;
+  margin: 0 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 10px;
+  }
+  
+  .MuiTableCell-root {
+    padding: 8px;
+    font-size: 0.875rem;
+  }
+}

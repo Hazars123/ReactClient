@@ -1,0 +1,176 @@
+/* Conteneur principal */
+.vehicles-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937; /* gray-800 */
+  }
+  
+  .loading,
+  .empty-msg {
+    text-align: center;
+    margin-top: 3rem;
+    color: #6b7280; /* gray-500 */
+  }
+  
+  /* Grille responsive */
+  .vehicles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  /* Petite card */
+  .vehicle-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .vehicle-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* Badge Disponible / Indisponible */
+  .badge {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    color: #fff;
+    z-index: 2;
+  }
+  .badge.available {
+    background-color: #22c55e; /* green-500 */
+  }
+  .badge.unavailable {
+    background-color: #ef4444; /* red-500 */
+  }
+  
+  /* Image */
+  .vehicle-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+  }
+  
+  /* Bloc infos */
+  .vehicle-info {
+    padding: 0.75rem;
+  }
+  
+  .vehicle-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 0.25rem 0;
+  }
+  .vehicle-title span {
+    font-weight: 400;
+    color: #4b5563;
+  }
+  
+  .vehicle-details {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .vehicle-price {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4f46e5; /* indigo-600 */
+    margin: 0 0 0.75rem 0;
+  }
+  
+/* CTA button premium look */
+.btn-reserve {
+    position: relative;
+    width: 100%;
+    padding: 0.6rem 0;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  /* Subtle lift & shadow on hover/active */
+  .btn-reserve:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+  }
+  .btn-reserve:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.25);
+  }
+  
+  /* Focus ring for keyboard nav */
+  .btn-reserve:focus-visible {
+    outline: 2px solid #4f46e5;
+    outline-offset: 2px;
+  }
+  
+  /* Disabled state */
+  .btn-reserve:disabled,
+  .btn-reserve.disabled {
+    background: #e5e7eb;
+    color: #9ca3af;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+  }
+
+  /* ===== Barre de filtres ===== */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #f9fafb;
+    border-radius: 0.75rem;
+  }
+  
+  .filter-bar input[type="text"] {
+    flex: 1 1 180px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+  }
+  
+  .price-range {
+    display: flex;
+    flex: 1 1 320px;
+    gap: 1rem;
+    align-items: center;
+    font-size: 0.875rem;
+  }
+  
+  .price-range label {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  input[type="range"] {
+    cursor: pointer;
+  }

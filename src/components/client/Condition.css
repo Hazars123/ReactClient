@@ -1,0 +1,184 @@
+/* Variables CSS */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #333;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Base Styles */
+  .condition-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .condition-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+  }
+  
+  .condition-header h1 {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .last-update {
+    color: #7f8c8d;
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+  
+  /* Sections */
+  .condition-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+  }
+  
+  .condition-section:hover {
+    transform: translateY(-3px);
+  }
+  
+  .condition-section h2 {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .section-number {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+  }
+  
+  .condition-section ul {
+    padding-left: 1.5rem;
+  }
+  
+  .condition-section li {
+    margin-bottom: 0.8rem;
+    position: relative;
+  }
+  
+  .condition-section li::before {
+    content: "•";
+    color: var(--secondary-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+  /* Acceptance Section */
+  .acceptance-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: var(--light-color);
+    border-radius: var(--border-radius);
+    text-align: center;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .checkbox-container input {
+    margin-right: 1rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .checkbox-container label {
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .accept-button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .accept-button:hover {
+    background-color: var(--primary-color);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .condition-container {
+      padding: 1rem;
+    }
+    
+    .condition-header h1 {
+      font-size: 1.8rem;
+    }
+    
+    .condition-section {
+      padding: 1rem;
+    }
+    
+    .acceptance-section {
+      padding: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .condition-header h1 {
+      font-size: 1.5rem;
+    }
+    
+    .condition-section h2 {
+      font-size: 1.2rem;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .section-number {
+      margin-bottom: 0.5rem;
+      margin-right: 0;
+    }
+    
+    .checkbox-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .checkbox-container input {
+      margin-bottom: 0.5rem;
+    }
+  }
